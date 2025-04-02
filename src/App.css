@@ -1,38 +1,96 @@
-.App {
-  text-align: center;
+/* Chat container styling */
+.chat-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Room selector input styles */
+.room-selector {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.room-selector input {
+  width: 48%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.room-selector input::placeholder {
+  font-style: italic;
+  color: #aaa;
+}
+
+/* Message container */
+.messages {
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Individual message styling */
+.message {
+  padding: 5px 0;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.message:last-child {
+  border-bottom: none;
+}
+
+.message strong {
+  color: #007bff;
+}
+
+/* Connection status styling */
+.connection-status {
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Message input styling */
+.message-input {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.message-input input {
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.message-input input::placeholder {
+  font-style: italic;
+  color: #aaa;
+}
+
+.message-input button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
   color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.message-input button:hover {
+  background-color: #45a049;
 }
